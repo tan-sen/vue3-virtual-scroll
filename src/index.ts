@@ -7,4 +7,6 @@ const plugin: Plugin = {
   },
 };
 
+export { VirtualScroll };
+
 export default plugin;

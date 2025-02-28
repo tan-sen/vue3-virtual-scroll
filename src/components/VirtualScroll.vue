@@ -1,9 +1,14 @@
 <template>
-  <div class="container" :style="{ height: height }" ref="boxRef">
+  <div
+    class="container"
+    style="position: relative; left: 0; top: 0; overflow-y: scroll"
+    :style="{ height: height }"
+    ref="boxRef"
+  >
     <div :style="customStyle"></div>
     <div
       v-for="item in currentShowList"
-      :key="item"
+      :key="item[listKey]"
       :ref="(el: any) => (itemDom = el)"
       :style="{ position: 'absolute', left: 0, top: item?.top }"
     >
@@ -23,6 +28,10 @@ const props = defineProps({
   height: {
     type: String,
     default: '600px',
+  },
+  listKey: {
+    type: String,
+    required: true,
   },
 });
 
@@ -97,11 +106,4 @@ function throttle(fn: Function, delay: number) {
 }
 </script>
 
-<style scoped>
-.container {
-  position: relative;
-  left: 0;
-  top: 0;
-  overflow-y: scroll;
-}
-</style>
+<style scoped></style>

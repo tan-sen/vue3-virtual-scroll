@@ -1,6 +1,6 @@
 {
   "name": "vue3-virtual-scroll-container",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "./dist/virtual-scroll.umd.js",
   "module": "./dist/virtual-scroll.es.js",
   "types": "./dist/index.d.ts",
@@ -40,5 +40,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tan-sen/vue3-virtual-scroll.git"
-  }
+  },
+  "bugs": "https://github.com/tan-sen/vue3-virtual-scroll/issues"
 }
